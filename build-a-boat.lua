@@ -1,4 +1,6 @@
 local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+local VirtualUser = game:GetService('VirtualUser')
+getgenv().noAfk = true
 
 function claim()
     plr.CFrame = CFrame.new(-51.5656433, 65.0000458, 1369.09009)
@@ -42,3 +44,9 @@ function claim()
 end
 
 claim()
+
+while noAfk do
+    wait(300)
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+end
