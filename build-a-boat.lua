@@ -36,7 +36,7 @@ function claim()
     wait(0.5)
 
     plr.CFrame = CFrame.new(-54, -360, 9485)
-    wait(22)
+    wait(24)
 
     workspace.ClaimRiverResultsGold:FireServer()
 end
